@@ -9,13 +9,11 @@ body{
 }
 .card{
     margin:20px;
+    height: 300px;
 }
 .container2{
     display: flex;
     flex-wrap: wrap;
-}
-.delito{
-    height: 300px;
 }
 h1{
     display: flex;

@@ -1,8 +1,3 @@
-const classes=[
-    'card text-white bg-primary mb-3',
-    'card text-white bg-secondary mb-3',
-    'card text-white bg-success mb-3',
-]
 const delito=[
     'Violacion',
     'Robo',
@@ -27,7 +22,14 @@ const classLista=[
     'card text-white bg-secondary mb-3',
     'card text-white bg-danger mb-3',
 ];
+const allTribunal=document.querySelectorAll('.card-header');
+let score1=0; 
+let score2=0; 
+let score3=0;
 function appearingCases(){
+    allTribunal[0].innerHTML=`Primer Tribunal ${score1}`;
+    allTribunal[1].innerHTML=`Segundo Tribunal ${score2}`;
+    allTribunal[2].innerHTML=`Tercer Tribunal ${score3}`;
     const delitoElegido=delito[Math.floor(Math.random()*delito.length)]
     const gradoElegido=grado[Math.floor(Math.random()*grado.length)];
     const descripcionElegida=descripcion[Math.floor(Math.random()*descripcion.length)]
@@ -43,6 +45,15 @@ function appearingCases(){
     `;
     setTimeout(()=>{
         const classDelito=classLista[Math.floor(Math.random()*classLista.length)]
+        if(classDelito==classLista[0]){
+            score1++
+        }
+        else if(classDelito==classLista[1]){
+            score2++
+        }
+        else if(classDelito==classLista[2]){
+            score3++
+        }
         divCard.className=classDelito;
         divCard.style.maxWidth='18rem'
     },2000)
