@@ -1,0 +1,23 @@
+body{
+    position: relative;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.card{
+    margin:20px;
+}
+.container2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.delito{
+    height: 300px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
